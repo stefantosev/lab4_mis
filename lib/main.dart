@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/calendar_screen.dart'; // Import your calendar screen
+import 'screens/calendar_screen.dart'; 
 
 void main() {
   runApp(const MyApp());
@@ -27,9 +27,9 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Exam Schedule'), // App bar title
+        title: const Text('Exam Schedule'),
       ),
-      body: const CalendarScreen(), // Display the CalendarScreen
+      body: const CalendarScreen(),
     );
   }
 }
