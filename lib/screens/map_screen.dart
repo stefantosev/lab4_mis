@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:geocoding/geocoding.dart';
 
 class MapScreen extends StatefulWidget {
   final LatLng examLocation;
@@ -16,18 +15,13 @@ class _MapScreenState extends State<MapScreen> {
 
   @override
   Widget build(BuildContext context) {
+    print('Exam location: ${widget.examLocation}');
     return Scaffold(
       appBar: AppBar(title: const Text('Exam Location')),
       body: GoogleMap(
-        onMapCreated: (controller) {
-          mapController = controller;
-          mapController.animateCamera(
-            CameraUpdate.newLatLngZoom(widget.examLocation, 15),
-          );
-        },
         initialCameraPosition: CameraPosition(
-          target: widget.examLocation,
-          zoom: 11.0,
+          target: LatLng(42.00437734905961, 21.409342165150097),
+          zoom: 15.0,
         ),
         markers: {
           Marker(

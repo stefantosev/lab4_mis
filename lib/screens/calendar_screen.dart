@@ -36,7 +36,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
     Exam(
       subject: 'Програмирање на видео игри',
       dateTime: DateTime(2025, 1, 23, 11, 00),
-      location: LatLng(37.7749, -122.4194),
+      location: LatLng(42.004377, 21.409342),
     ),
   ];
 
